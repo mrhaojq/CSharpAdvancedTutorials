@@ -41,6 +41,13 @@ namespace CSharpGenerics
                 WriteLine(item);//不需要装箱拆箱 性能高
             }
 
+            //泛型类的静态成员
+            //只能在类的一个实例中共享
+            StaticDemo<string>.x = 4;
+            StaticDemo<int>.x = 5;
+            WriteLine($"StaticDemo<string>.x:{StaticDemo<string>.x}");
+            WriteLine($"StaticDemo<int>.x:{StaticDemo<int>.x}");
+
             ReadKey();
         }
     }

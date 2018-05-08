@@ -5,7 +5,7 @@ using System.Text;
 
 namespace CSharpGenerics.LinkedListT
 {
-    public class LinkedList<T> : IEnumerable<T>
+    public class LinkedList<T> : IEnumerable<T>//实现IEnumerable<T>泛型接口 泛型有继承性也可继承泛型类
     {
         public LinkedListNode<T> First { get; private set; }
         public LinkedListNode<T> Last { get; private set; }
