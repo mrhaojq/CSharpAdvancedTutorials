@@ -5,11 +5,13 @@ VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpAttribute", "CSharpAttribute\CSharpAttribute.csproj", "{EE9E62CB-4E1C-4709-A253-5691389F8E6C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpRelection", "CSharpRelection\CSharpRelection.csproj", "{DC531122-C0A5-4653-97AC-0845A59F4CD4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpReflection", "CSharpRelection\CSharpReflection.csproj", "{DC531122-C0A5-4653-97AC-0845A59F4CD4}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dynamic", "Dynamic", "{5E7D036C-B919-49DF-BD6D-CCD981A55DAF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharpGenerics", "CSharpGenerics\CSharpGenerics.csproj", "{F3399F24-02D7-41CA-AD46-F9909B0D14C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicDemo", "DynamicDemo\DynamicDemo.csproj", "{B6D9AB7E-4D77-4568-B150-52DE05871E64}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Generics", "Generics", "{166AF2C9-2978-46EF-8996-F15B2F5E68DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentManager", "DocumentManager\DocumentManager.csproj", "{FF90084D-867C-4042-8311-2212E24FA33C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,16 +27,9 @@ Global
 		{DC531122-C0A5-4653-97AC-0845A59F4CD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC531122-C0A5-4653-97AC-0845A59F4CD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC531122-C0A5-4653-97AC-0845A59F4CD4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B6D9AB7E-4D77-4568-B150-52DE05871E64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B6D9AB7E-4D77-4568-B150-52DE05871E64}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B6D9AB7E-4D77-4568-B150-52DE05871E64}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B6D9AB7E-4D77-4568-B150-52DE05871E64}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{B6D9AB7E-4D77-4568-B150-52DE05871E64} = {5E7D036C-B919-49DF-BD6D-CCD981A55DAF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F447050B-9405-4487-A9EC-6923A30798B2}
