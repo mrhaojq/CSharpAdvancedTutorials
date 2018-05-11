@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharpGenerics", "CSharpGen
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharpGenericsDocumentManager", "DocumentManager\CSharpGenericsDocumentManager.csproj", "{0640F18D-A755-4402-A21E-03122D160179}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpExtensionMethod", "CSharpExtensionMethod\CSharpExtensionMethod.csproj", "{246C619A-B23F-4A28-8C03-EFCA768EA9BF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{0640F18D-A755-4402-A21E-03122D160179}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0640F18D-A755-4402-A21E-03122D160179}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0640F18D-A755-4402-A21E-03122D160179}.Release|Any CPU.Build.0 = Release|Any CPU
+		{246C619A-B23F-4A28-8C03-EFCA768EA9BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{246C619A-B23F-4A28-8C03-EFCA768EA9BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{246C619A-B23F-4A28-8C03-EFCA768EA9BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{246C619A-B23F-4A28-8C03-EFCA768EA9BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
