@@ -3,6 +3,8 @@ using CSharpGenerics.LinkedListObjects;
 using CSharpGenerics.Variance;
 using static System.Console;
 using T = CSharpGenerics.LinkedListT;
+using CSharpGenerics.GenericsMethods;
+using System.Collections.Generic;
 
 namespace CSharpGenerics
 {
@@ -34,7 +36,7 @@ namespace CSharpGenerics
 
             Shape sp = new Shape();
             Rectangle rect = new Rectangle();
-            rect =(Rectangle)sp;// 子类的实例指向基类的引用需要类型转换（存在安全隐患）
+            rect = (Rectangle)sp;// 子类的实例指向基类的引用需要类型转换（存在安全隐患）
             sp = rect;//基类实例指向子类的引用是直接的
 
             ReadKey();
@@ -91,7 +93,7 @@ namespace CSharpGenerics
 
         private static void 泛型接口的协变()
         {
-            
+
             IIndex<Rectangle> rectangles = RectangleCollection.GetRectangles();
             //如果IIndex<out T> 去掉out  IIndex<Shape> shapes = rectangles; 编译错误，
             //Rectangle是Shape的子类 由子类泛型转换成基类泛型 需要协变（out T）？
@@ -105,7 +107,8 @@ namespace CSharpGenerics
             }
         }
 
-        private static void 泛型接口的抗变() {
+        private static void 泛型接口的抗变()
+        {
             IDisplay<Shape> shapeDisplay = new ShapeDisplay();
             IDisplay<Rectangle> rectangleDisplay = shapeDisplay;
 
@@ -113,6 +116,48 @@ namespace CSharpGenerics
 
             shapeDisplay.Show(rectangles[0]);
             rectangleDisplay.Show(rectangles[0]);
+        }
+
+        private static void 泛型方法()
+        {
+
+            //普通泛型方法
+            var accounts = new List<Account>()
+            {
+                new Account("Christian",1500),
+                 new Account("Stephanie",2200),
+                  new Account("Angela",1800),
+                   new Account("Matthias",2400)
+            };
+
+            WriteLine("普通泛型方法");
+            decimal balance1 = Algorithms.AccumulateSimple(accounts);
+            WriteLine(balance1);
+
+            //带约束的泛型方法
+            var accounts1 = new List<IAccount>()
+            {
+                new Account1("Christian",1500),
+                 new Account1("Stephanie",2200),
+                  new Account1("Angela",1800),
+                   new Account1("Matthias",2400)
+            };
+
+            WriteLine("带约束的泛型方法");
+            decimal balance2 = Algorithms.AccumulateSimple1<IAccount>(accounts1);
+            decimal balance3 = Algorithms.AccumulateSimple1(accounts1);//编译器会从方法的参数类型中自动推断出泛型类型参数 这两种调用方式是一样的
+            WriteLine(balance2);
+
+            WriteLine("带委托的泛型方法");
+            var accounts3 = new List<Account>()
+            {
+                new Account("Christian",1500),
+                 new Account("Stephanie",2200),
+                  new Account("Angela",1800),
+                   new Account("Matthias",2400)
+            };
+            decimal amount = Algorithms.AccumulateSimple2<Account, decimal>(accounts3, (account, sum) => sum += account.Balance);
+
         }
 
     }
